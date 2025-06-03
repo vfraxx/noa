@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from 'next/link'
 import { Tab } from '@headlessui/react'
 import { Menu } from '@headlessui/react'
 
@@ -17,22 +18,22 @@ export default function Home() {
          <Menu.Items className="absolute peyda text-2xl flex flex-col justify-between items-center right-0 mt-0 w-full h-1/2 p-6  divide-gray-100 rounded-md bg-[#161a15dd] shadow-lg ring-1 ring-black/5 focus:outline-none transiot">
         <Menu.Item className="mt-12">
           {({ active }) => (
-            <a
+            <Link
               className={`${active && 'opacity-60'}`}
               href="/"
             >
               منو
-            </a>
+            </Link>
           )}
         </Menu.Item>
         <Menu.Item>
           {({ active }) => (
-            <a
+            <Link
               className={`${active && 'opacity-60'}`}
-              href="/account-settings"
+              href="/"
             >
               ادرس
-            </a>
+            </Link>
           )}
         </Menu.Item>
         <Menu.Item disabled>
